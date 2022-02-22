@@ -111,6 +111,10 @@ button, .btn {
   }
 }
 
+button:hover {
+  filter: brightness(90%);
+}
+
 button:disabled,
 button[disabled]{
   filter: brightness(80%);
@@ -122,8 +126,12 @@ button.btn-blue {
   color: white;
 }
 
-button:hover {
-  filter: brightness(90%);
+button.btn-logo {
+  background-color: var(--color-text);
+  color: white;
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
 }
 
 /* Utilities */
