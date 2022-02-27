@@ -23,7 +23,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "lib/hooks.js"  ],
+, "lib/hooks.js", "pages/[username]/[slug].jsx"  ],
   "exclude": [
     "node_modules"
   ]

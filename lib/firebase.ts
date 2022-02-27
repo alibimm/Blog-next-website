@@ -22,5 +22,23 @@ export default firebaseApp;
 export const auth = firebase.auth();
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
 
+export const fromMillis = firebase.firestore.Timestamp.fromMillis;
+
 export const firestore = firebase.firestore();
 export const storage = firebase.storage();
+
+export async function getUserWithUsername(username: string) {
+  let ref = firestore.collection('users');
+  let query = ref.where('username', '==', username).limit(1);
+  let doc = (await query.get()).docs[0];
+  return doc;
+}
+
+export function postToJSON(doc) { // Some types like firebase timestamp are not JSON serializable
+  const data = doc.data();
+  return {
+    ...data,
+    createdAt: data.createdAt.toMillis(),
+    updatedAt: data.updatedAt.toMillis(),
+  }
+}
