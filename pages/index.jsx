@@ -1,7 +1,3 @@
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
-
 import Loader from "../components/Loader";
 import Metatags from "../components/Metatags";
 import { firestore, fromMillis, postToJSON } from "../lib/firebase";

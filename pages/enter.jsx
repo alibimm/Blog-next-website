@@ -94,7 +94,7 @@ function UsernameForm() {
   }, [formValue]);
 
   const checkUsername = useCallback(
-    debounce(async (username: string) => {
+    debounce(async (username) => {
       if (username.length >= 3) {
         let ref = firestore.doc(`usernames/${username}`);
         const { exists } = await ref.get();

@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import ReactMarkdown from "react-markdown";
 import { serverTimestamp } from "../../lib/firebase";
 import toast from "react-hot-toast";
+import ImageUploader from "../../components/ImageUploader";
 
 export default function AdminPostEdit(props) {
   return (
@@ -87,6 +88,8 @@ function PostForm({ postRef, defaultValues, preview }) {
       )}
 
       <div className={preview ? styles.hidden : styles.controls}>
+        <ImageUploader />
+
         <textarea
           name="content"
           {...register("content", {
