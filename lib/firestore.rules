@@ -52,8 +52,8 @@ service cloud.firestore {
         let hasValueFields = request.resource.data.diff(resource.data).affectedKeys().hasOnly(['heartCount']);
         let currentUser = request.auth.uid;
 
-        let heartDocExistsAfter = existsAfter(/databases/$(database)/users/$(userID)/posts/$(postID)/hearts/$(currentUser));
-        let heartDocExists = exists(/databases/$(database)/users/$(userID)/posts/$(postID)/hearts/$(currentUser));
+        let heartDocExistsAfter = existsAfter(/databases/$(database)/documents/users/$(userID)/posts/$(postID)/hearts/$(currentUser));
+        let heartDocExists = exists(/databases/$(database)/documents/users/$(userID)/posts/$(postID)/hearts/$(currentUser));
 
         let heartAdded = !heartDocExists && heartDocExistsAfter;
         let heartRemoved = heartDocExists && !heartDocExistsAfter;
