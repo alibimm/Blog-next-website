@@ -3,6 +3,7 @@ import Metatags from "../components/Metatags";
 import { firestore, fromMillis, postToJSON } from "../lib/firebase";
 import { useState } from "react";
 import PostFeed from "../components/PostFeed";
+import Metatags from "../../components/Metatags";
 
 const LIMIT = 5;
 
@@ -52,7 +53,7 @@ export default function Home(props) {
 
   return (
     <main>
-      <Metatags />
+      <Metatags title="Feed"/>
       <PostFeed posts={posts} />
 
       <Loader show={loading} />

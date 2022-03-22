@@ -1,7 +1,7 @@
 import Head from 'next/head';
 
 export default function Metatags({
-  title = 'Alibi\'s page',
+  title = 'Blog website',
   description = 'Alibi\'s website created with Next.js',
   image = 'https://media-exp1.licdn.com/dms/image/C5603AQHFrazdH7Lb-A/profile-displayphoto-shrink_400_400/0/1613043720970?e=1651708800&v=beta&t=-7HhE6eyLUl1ts8SH_M6l4iRQtWf4hgGJmBZdb2P9gg',
 }) {
