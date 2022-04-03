@@ -1,4 +1,4 @@
-import { auth, firestore } from "../lib/firebase";
+import { auth, firestore, googleAuthProvider } from "../lib/firebase";
 import SignOutButton from "../components/SignOutButton";
 import { UserContext } from "../lib/context";
 import { useCallback, useContext, useEffect, useState } from "react";
