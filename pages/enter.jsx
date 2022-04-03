@@ -3,7 +3,7 @@ import SignOutButton from "../components/SignOutButton";
 import { UserContext } from "../lib/context";
 import { useCallback, useContext, useEffect, useState } from "react";
 import debounce from "lodash.debounce";
-import Metatags from "../../components/Metatags";
+import Metatags from "../components/Metatags";
 
 export default function EnterPage(props) {
   const { user, username } = useContext(UserContext);
